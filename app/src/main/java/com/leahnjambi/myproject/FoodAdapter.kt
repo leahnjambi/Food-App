@@ -18,8 +18,8 @@ class `FoodAdapter`(private val foodList: ArrayList<Food>)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
-        val View = LayoutInflater.from(parent.context).inflate(R.id.each_item, parent, false)
-        return FoodViewHolder(View)
+        return FoodViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false))
+
     }
 
     override fun getItemCount(): Int {

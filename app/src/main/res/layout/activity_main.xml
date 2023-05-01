@@ -9,8 +9,8 @@
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="612dp"
-        android:layout_height="1072dp"
+        android:layout_width="786dp"
+        android:layout_height="1091dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -182,7 +182,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler View"
+                    android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -193,7 +193,7 @@
                     app:layout_constraintVertical_bias="1.0" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
+                    android:id="@+id/recyclerView2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -211,12 +211,13 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom"
             android:backgroundTint="@color/white"
             app:fabCradleMargin="8dp"
