@@ -18,7 +18,7 @@ class `FoodAdapter`(private val foodList: ArrayList<Food>)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
-        return FoodViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false))
+        return FoodViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.activity_catergory, parent, false))
 
     }
 
