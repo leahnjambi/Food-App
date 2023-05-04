@@ -11,7 +11,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView1: RecyclerView
     private lateinit var recyclerView2:RecyclerView
     private lateinit var foodList: ArrayList<Food>
-    private lateinit var foodAdapter: FoodAdapter
+    private lateinit var foodAdapter: CatergoryAdapter
+    private lateinit var popularAdapter: PopularAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +26,12 @@ class MainActivity : AppCompatActivity() {
 
         foodList.add(Food(R.drawable.cat_1, "Pizza"))
         foodList.add(Food(R.drawable.cat_2, "Burger"))
-        foodList.add(Food(R.drawable.cat_3, "Pizza"))
+        foodList.add(Food(R.drawable.cat_3, "Hotdog"))
         foodList.add(Food(R.drawable.cat_4, "Drink"))
         foodList.add(Food(R.drawable.cat_5, "Donut"))
 
 
-        foodAdapter = FoodAdapter(foodList)
+        foodAdapter = CatergoryAdapter(foodList)
         recyclerView1.adapter = foodAdapter
         foodAdapter.onItemClick = {
             val intent = Intent(this,CatergoryActivity::class.java)
@@ -46,15 +47,15 @@ class MainActivity : AppCompatActivity() {
 
         foodList = ArrayList()
 
-        foodList.add(Food(R.drawable.pop_1, "Pizza"))
-        foodList.add(Food(R.drawable.pop_2, "Burger"))
-        foodList.add(Food(R.drawable.pop_3, "Pizza"))
+        foodList.add(Food(R.drawable.pop_1, "Pepperoni Pizza"))
+        foodList.add(Food(R.drawable.pop_2, " Cheese Burger"))
+        foodList.add(Food(R.drawable.pop_3, "Vegetable Pizza"))
 
 
-        foodAdapter = FoodAdapter(foodList)
-        recyclerView2.adapter = foodAdapter
-        foodAdapter.onItemClick = {
-            val intent = Intent(this,CatergoryActivity::class.java)
+        popularAdapter = PopularAdapter(foodList)
+        recyclerView2.adapter = popularAdapter
+        popularAdapter.onItemClick = {
+            val intent = Intent(this,PopularActivity::class.java)
             intent.putExtra("food", it)
             startActivity(intent)
 

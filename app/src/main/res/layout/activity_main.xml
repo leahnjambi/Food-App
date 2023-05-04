@@ -167,8 +167,8 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rVw1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="403dp"
+                    android:layout_height="140dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -192,6 +192,7 @@
                     android:id="@+id/rVw2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -199,12 +200,20 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/txtView5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="settings"
+                android:textAlignment="center"
+                android:textColor="#010910" />
+
         </LinearLayout>
     </ScrollView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -220,10 +229,9 @@
             app:fabCradleVerticalOffset="6dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:id="@+id/homeBtn"
@@ -322,13 +330,6 @@
                         android:layout_height="match_parent"
                         app:srcCompat="@drawable/baseline_settings_24" />
 
-                    <TextView
-                        android:id="@+id/txtView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="settings"
-                        android:textAlignment="center"
-                        android:textColor="#010910" />
                 </LinearLayout>
             </LinearLayout>
 

@@ -7,13 +7,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class `FoodAdapter`(private val foodList: ArrayList<Food>)
-    : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(){
+class CatergoryAdapter(private val foodList: ArrayList<Food>)
+    : RecyclerView.Adapter<CatergoryAdapter.FoodViewHolder>(){
 
     var onItemClick : ((Food) -> Unit)? = null
     class FoodViewHolder(itemView:View) :RecyclerView.ViewHolder(itemView){
-        val imageView : ImageView = itemView.findViewById(R.id.imageView)
-        val textView1 : TextView = itemView.findViewById(R.id.fee)
+        val imageView : ImageView = itemView.findViewById(R.id.imgCat)
+        val textView1 : TextView = itemView.findViewById(R.id.txtCat)
 
     }
 
