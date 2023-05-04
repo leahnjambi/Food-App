@@ -11,7 +11,7 @@ class CatergoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_catergory)
         val food = intent.getParcelableExtra<Food>("food")
         if (food !=null){
-            val textView : TextView = findViewById(R.id.textView)
+            val textView : TextView = findViewById(R.id.fee)
             val imageView : ImageView = findViewById(R.id.imageView)
 
             textView.text = food.name

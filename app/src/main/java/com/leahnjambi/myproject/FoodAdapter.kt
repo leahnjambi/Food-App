@@ -13,7 +13,7 @@ class `FoodAdapter`(private val foodList: ArrayList<Food>)
     var onItemClick : ((Food) -> Unit)? = null
     class FoodViewHolder(itemView:View) :RecyclerView.ViewHolder(itemView){
         val imageView : ImageView = itemView.findViewById(R.id.imageView)
-        val textView : TextView = itemView.findViewById(R.id.textView)
+        val textView1 : TextView = itemView.findViewById(R.id.fee)
 
     }
 
@@ -29,7 +29,7 @@ class `FoodAdapter`(private val foodList: ArrayList<Food>)
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val food = foodList[position]
         holder.imageView.setImageResource(food.image)
-        holder.textView.text = food.name
+        holder.textView1.text = food.name
 
         holder.itemView.setOnClickListener {
             onItemClick?.invoke(food)

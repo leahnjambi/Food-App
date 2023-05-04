@@ -2,8 +2,8 @@ package com.leahnjambi.myproject
 
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView1= findViewById(R.id.rVw1)
         recyclerView1.setHasFixedSize(true)
         recyclerView1.layoutManager = LinearLayoutManager(this)
+        recyclerView1.setLayoutManager(LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true))
+
         foodList = ArrayList()
 
         foodList.add(Food(R.drawable.cat_1, "Pizza"))
@@ -40,6 +42,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView2 = findViewById(R.id.rVw2)
         recyclerView2.setHasFixedSize(true)
         recyclerView2.layoutManager = LinearLayoutManager(this)
+        recyclerView2.setLayoutManager(LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true))
+
         foodList = ArrayList()
 
         foodList.add(Food(R.drawable.pop_1, "Pizza"))
