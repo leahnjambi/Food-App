@@ -3,6 +3,10 @@ package com.leahnjambi.myproject
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +17,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var foodList: ArrayList<Food>
     private lateinit var foodAdapter: CatergoryAdapter
     private lateinit var popularAdapter: PopularAdapter
+    lateinit var peopleButton: Button
+    lateinit var order :TextView
+    lateinit var search :EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,5 +68,23 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+        peopleButton = findViewById(R.id.PeopleBtn)
+        peopleButton.setOnClickListener {
+            val watu = Intent(this,ContactActivity::class.java)
+            startActivity(watu)
+        }
+        order = findViewById(R.id.txtVw3)
+        order.setOnClickListener {
+            val itisha = Intent(this,OrderActivity::class.java)
+            startActivity(itisha)
+
+        }
+        search = findViewById(R.id.edtText1)
+        search.setOnClickListener {
+            val tafuta = Intent(this,CatergoryActivity::class.java)
+            startActivity(tafuta)
+
+        }
+
     }
 }

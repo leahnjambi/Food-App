@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_margin="50dp"
     android:background="@drawable/card_background"
-    android:elevation="3dp"
     tools:context=".PopularActivity">
 
     <TextView
@@ -34,12 +33,13 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pop_1"
-        tools:layout_editor_absoluteY="93dp" />
+        tools:layout_editor_absoluteY="93dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/fee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="8dp"
         android:text="0.0"
         android:textSize="34sp"
@@ -51,27 +51,28 @@
 
     <TextView
         android:id="@+id/cash"
-        android:layout_width="28dp"
-        android:layout_height="41dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="8dp"
-        android:text="$"
+        android:text="Ksh"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fee"
         app:layout_constraintEnd_toStartOf="@+id/fee"
         app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/fee" />
 
     <TextView
         android:id="@+id/txtViewAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="16dp"
         android:background="@drawable/orange_button"
         android:paddingTop="3dp"
         android:paddingEnd="8dp"
         android:paddingBottom="3dp"
-        android:text="+Add"
+        android:text="+ Add"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"

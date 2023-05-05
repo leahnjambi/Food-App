@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">My Project</string>
     <string name="find_your_favourite_food">Find Your Favourite Food</string>
+    <string-array name="Contacts">
+        <item>Chef Peter</item>
+        <item>Chef Milka</item>
+        <item>Chef Rose</item>
+        <item>Chef Wairimu</item>
+        <item>Chef Naicy</item>
+        <item>Chef Kamau</item>
+        <item>Chef Loise</item>
+        <item>Chef Grace</item>
+        <item>Chef Harriet</item>
+        <item>Chef Maureen</item>
+        <item>Chef John</item>
+        <item>Chef Danson</item>
+        <item>Chef Willie</item>
+        <item>Chef David</item>
+        <item>Chef Kelvin</item>
+
+    </string-array>
 </resources>
