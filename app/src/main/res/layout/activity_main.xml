@@ -18,7 +18,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="90dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -168,6 +169,8 @@
                     android:id="@+id/rVw1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingStart="22dp"
+                    android:paddingEnd="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
@@ -192,6 +195,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
+                    android:paddingStart="22dp"
+                    android:paddingEnd="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"

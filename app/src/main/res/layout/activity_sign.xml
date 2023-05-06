@@ -19,11 +19,12 @@
         android:textColorHint="@color/material_dynamic_neutral30"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -31,7 +32,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Enter Phone Number"
         android:inputType="phone"
@@ -39,18 +39,18 @@
         android:textColorHint="@color/material_dynamic_neutral30"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editLocation"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editName" />
+        app:layout_constraintTop_toBottomOf="@+id/editName"
+        app:layout_constraintVertical_bias="0.063" />
 
     <EditText
         android:id="@+id/editLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
         android:ems="10"
         android:hint="Enter Location"
@@ -61,20 +61,23 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+        app:layout_constraintVertical_bias="0.123" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Sign In"
         android:textSize="24sp"
         android:textStyle="bold"
         app:backgroundTint="@color/material_dynamic_primary80"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/editLocation"
+        app:layout_constraintVertical_bias="0.184" />
 </androidx.constraintlayout.widget.ConstraintLayout>

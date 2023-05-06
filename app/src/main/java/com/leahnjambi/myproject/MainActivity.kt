@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var foodList: ArrayList<Food>
     private lateinit var foodAdapter: CatergoryAdapter
     private lateinit var popularAdapter: PopularAdapter
-    lateinit var peopleButton: Button
+    lateinit var peopleButton: LinearLayout
     lateinit var order :TextView
     lateinit var search :EditText
 
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
         order = findViewById(R.id.txtVw3)
         order.setOnClickListener {
-            val itisha = Intent(this,OrderActivity::class.java)
+            val itisha = Intent(this,SignActivity::class.java)
             startActivity(itisha)
 
         }
