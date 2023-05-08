@@ -1,7 +1,6 @@
 package com.leahnjambi.myproject
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -32,11 +31,7 @@ class CostActivity : AppCompatActivity() {
 
         foodAdapter = CostAdapter(foodList)
         recyclerView.adapter = foodAdapter
-        foodAdapter.onItemClick = {
-            val intent = Intent(this,ShowDetailsActivity::class.java)
-            intent.putExtra("Food", it)
-            startActivity(intent)
-        }
+
 
 
 
