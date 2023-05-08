@@ -192,9 +192,8 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rVw2"
-                    android:layout_width="match_parent"
+                    android:layout_width="424dp"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="8dp"
                     android:paddingStart="22dp"
                     android:paddingEnd="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -217,8 +216,8 @@
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="400dp"
+            android:layout_height="74dp"
             android:backgroundTint="@color/white"
             app:fabCradleMargin="6dp"
             app:fabCradleRoundedCornerRadius="50dp"
@@ -310,7 +309,7 @@
                         android:id="@+id/txtView4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="search"
+                        android:text="Support"
                         android:textAlignment="center"
                         android:textColor="#010910" />
                 </LinearLayout>
@@ -331,7 +330,7 @@
                         android:id="@+id/txtSettings"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="settings"
+                        android:text="Setting"
                         android:textAlignment="center"
                         android:textColor="#010910" />
 

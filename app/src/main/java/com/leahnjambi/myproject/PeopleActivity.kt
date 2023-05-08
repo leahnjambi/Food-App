@@ -5,22 +5,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class PopularActivity : AppCompatActivity() {
-    private lateinit var add : TextView
-
+class PeopleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_popular)
-        val food = intent.getParcelableExtra<Food>("food")
-        if (food !=null){
+        setContentView(R.layout.activity_people)
+        val people = intent.getParcelableExtra<People>("people")
+        if (people !=null){
             val textView : TextView = findViewById(R.id.textView)
             val imageView : ImageView = findViewById(R.id.imageView)
 
-            textView.text = food.name
-            imageView.setImageResource(food.image)
+            textView.text = people.name
+            imageView.setImageResource(people.image)
 
 
         }
-
     }
 }

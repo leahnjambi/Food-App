@@ -19,20 +19,12 @@
                 android:id="@+id/titleTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="title"
+                android:layout_marginTop="60dp"
+                android:text="Pizza"
                 android:textAlignment="center"
-                android:textSize="24sp"
                 android:textColor="#021B32"
-                android:textStyle="bold"
-                android:layout_marginTop="60dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/priceTxt"
-                android:textColor="#F44336"
-                android:textSize="24sp"
-                android:text="Ksh"
-                android:textAlignment="center"/>
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imgPizza"
