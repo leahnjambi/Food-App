@@ -58,50 +58,27 @@
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/myicon" />
 
-                <EditText
-                    android:id="@+id/edtText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:autofillHints=""
-                    android:background="@drawable/search_background"
-                    android:drawableStart="@drawable/search"
-                    android:drawablePadding="10dp"
-                    android:hint="@string/find_your_favourite_food"
-                    android:inputType="text"
-                    android:paddingStart="14dp"
-                    android:textColorHint="#757575"
-                    android:textSize="14sp"
-                    android:textStyle="bold|italic"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.494"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mTvTitle2"
-                    tools:ignore="RtlSymmetry" />
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout"
-                    android:layout_width="354dp"
-                    android:layout_height="105dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="32dp"
+                    android:layout_width="359dp"
+                    android:layout_height="95dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:background="@drawable/orange_background_banner"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/edtText1">
+                    app:layout_constraintTop_toBottomOf="@+id/mTvTitle2">
 
                     <ImageView
                         android:id="@+id/imageView6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
                         android:contentDescription="TODO"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintVertical_bias="0.0"
                         app:srcCompat="@drawable/image_banner" />
 
                     <TextView
@@ -251,23 +228,23 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/visibleBtn"
+                    android:id="@+id/searchBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:visibility="invisible">
+                    android:layout_marginLeft="50dp"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imgVs"
-                        android:layout_width="154dp"
-                        android:layout_height="43dp"
-                        app:srcCompat="@drawable/baseline_photo_library_24" />
+                        android:id="@+id/imgsearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/search" />
 
                     <TextView
-                        android:id="@+id/txtView3"
+                        android:id="@+id/txtview2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="search"
+                        android:text="Search"
                         android:textAlignment="center"
                         android:textColor="#010910" />
                 </LinearLayout>
@@ -275,8 +252,9 @@
 
                 <LinearLayout
                     android:id="@+id/PeopleBtn"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="150dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -299,7 +277,7 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#F44336"

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class HomeActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class HomeActivity : AppCompatActivity() {
     lateinit var plus :ImageView
     lateinit var numberOrder:TextView
     lateinit var orderButton: Button
+    private var numberOrderVal: Int = 0;
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -29,21 +31,22 @@ class HomeActivity : AppCompatActivity() {
             textView2.text = food.number
 
         }
-        numberOrder = findViewById(R.id.numberOrderText)
-        minus = findViewById(R.id.imgMinus)
-        minus.setOnClickListener{
-            val firstNumber = numberOrder.text.toString().trim()
-            val secondNumber:Int =1
-            var jibu = firstNumber.toDouble() - secondNumber
-            numberOrder.text = jibu.toString()
+        numberOrder = findViewById(R.id.numberOrderText);
+        numberOrderVal = numberOrder.text.toString().toInt();
+        minus = findViewById(R.id.imgMinus);
 
+        minus.setOnClickListener {
+            if(numberOrderVal == 0){
+                Toast.makeText( this, "Quantity cannot be less than 0.", Toast.LENGTH_SHORT).show()
+            } else {
+                numberOrderVal--;
+                displayTotals();
+            }
         }
         plus = findViewById(R.id.imgPlus)
         plus.setOnClickListener {
-                val firstNumber = numberOrder.text.toString().trim()
-                val secondNumber:Int =1
-                var jibu = firstNumber.toDouble() + secondNumber
-                numberOrder.text = jibu.toString()
+            numberOrderVal++;
+            displayTotals();
         }
         orderButton = findViewById(R.id.addToCartBtn)
         orderButton.setOnClickListener {
@@ -51,5 +54,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(itisha)
         }
 
+    }
+
+    private fun displayTotals() {
+        numberOrder.setText(numberOrderVal);
     }
 }

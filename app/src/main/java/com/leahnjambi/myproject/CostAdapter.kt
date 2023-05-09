@@ -9,17 +9,29 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CostAdapter(private val foodList: ArrayList<Cost>)
     : RecyclerView.Adapter<CostAdapter.FoodViewHolder>(){
+    private lateinit var mListener:onItemClickListener
+    interface onItemClickListener{
+        fun onItemClick(Cost:Int)
+    }
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
 
-    var onItemClick : ((Cost) -> Unit)? = null
-    class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    }
+
+    class FoodViewHolder(itemView: View,listener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
         val imageView : ImageView = itemView.findViewById(R.id.imgVwHm)
         val textView1 : TextView = itemView.findViewById(R.id.txtVwHome)
         val textView2 : TextView = itemView.findViewById(R.id.txtVwHm3)
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(adapterPosition)
+            }
+        }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
-        return FoodViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.activity_home, parent, false))
+        return FoodViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.activity_home, parent, false),mListener)
 
     }
 
@@ -33,10 +45,7 @@ class CostAdapter(private val foodList: ArrayList<Cost>)
         holder.textView1.text = food.name
         holder.textView2.text = food.number
 
-        holder.itemView.setOnClickListener {
-            onItemClick?.invoke(food)
-
-        }
 
     }
 }
+

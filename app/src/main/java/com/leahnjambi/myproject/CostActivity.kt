@@ -31,6 +31,12 @@ class CostActivity : AppCompatActivity() {
 
         foodAdapter = CostAdapter(foodList)
         recyclerView.adapter = foodAdapter
+        foodAdapter.setOnItemClickListener(object : CostAdapter.onItemClickListener{
+            override fun onItemClick(Cost: Int) {
+                TODO("Not yet implemented")
+            }
+
+        })
 
 
 

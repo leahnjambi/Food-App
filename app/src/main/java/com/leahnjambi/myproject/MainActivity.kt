@@ -1,13 +1,14 @@
 package com.leahnjambi.myproject
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.EditText
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView1: RecyclerView
@@ -16,12 +17,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var foodAdapter: CatergoryAdapter
     private lateinit var popularAdapter: PopularAdapter
     lateinit var peopleButton: LinearLayout
-    lateinit var search :EditText
     lateinit var home :LinearLayout
+    lateinit var cart: FloatingActionButton
+    lateinit var search :LinearLayout
 
 
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -79,5 +82,18 @@ class MainActivity : AppCompatActivity() {
             val pata = Intent(this,CostActivity::class.java)
             startActivity(pata)
         }
+        cart = findViewById(R.id.cart)
+        cart.setOnClickListener {
+            val ongeza = Intent(this,StorageActivity::class.java)
+            startActivity(ongeza)
+
+        }
+        search = findViewById(R.id.searchBtn)
+        search.setOnClickListener {
+            val tafuta = Intent(this,RetrieveActivity::class.java)
+            startActivity(tafuta)
+
+        }
+
     }
 }
