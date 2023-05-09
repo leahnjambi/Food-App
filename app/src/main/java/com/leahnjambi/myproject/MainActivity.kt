@@ -3,10 +3,8 @@ package com.leahnjambi.myproject
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,9 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var foodList: ArrayList<Food>
     private lateinit var foodAdapter: CatergoryAdapter
     private lateinit var popularAdapter: PopularAdapter
-    private lateinit var listAdapter:ArrayAdapter<String>
     lateinit var peopleButton: LinearLayout
-    lateinit var order :TextView
     lateinit var search :EditText
     lateinit var home :LinearLayout
 
@@ -69,7 +65,6 @@ class MainActivity : AppCompatActivity() {
         foodList.add(Food(R.drawable.recipe10, "Vegetable Pizza"))
 
 
-
         popularAdapter = PopularAdapter(foodList)
         recyclerView2.adapter = popularAdapter
 
@@ -79,24 +74,10 @@ class MainActivity : AppCompatActivity() {
             val watu = Intent(this,ContactActivity::class.java)
             startActivity(watu)
         }
-        order = findViewById(R.id.txtVw3)
-        order.setOnClickListener {
-            val itisha = Intent(this,SignActivity::class.java)
-            startActivity(itisha)
-
-        }
-        search = findViewById(R.id.edtText1)
-        search.setOnClickListener {
-
-
-        }
         home = findViewById(R.id.homeBtn)
         home.setOnClickListener {
             val pata = Intent(this,CostActivity::class.java)
             startActivity(pata)
         }
-
-
     }
-
 }

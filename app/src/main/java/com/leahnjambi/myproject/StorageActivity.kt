@@ -1,0 +1,74 @@
+package com.leahnjambi.myproject
+
+import android.app.ProgressDialog
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.storage.FirebaseStorage
+import com.leahnjambi.myproject.databinding.ActivityStorageBinding
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
+
+class StorageActivity : AppCompatActivity() {
+    lateinit var binding:ActivityStorageBinding
+    lateinit var ImageUri:Uri
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityStorageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.selectImageBtn.setOnClickListener{
+
+            selectImage()
+        }
+        binding.uploadImageBtn.setOnClickListener{
+            uploadImage()
+
+        }
+    }
+
+    private fun uploadImage() {
+        val progressionDialog = ProgressDialog(this)
+        progressionDialog.setMessage("Uploading File...")
+        progressionDialog.setCancelable(false)
+        progressionDialog.show()
+
+        val formatter = SimpleDateFormat("yyyy_MM_dd_hh_mm_ss", Locale.getDefault())
+        val now = Date()
+        val fileName = formatter.format(now)
+        val storageReference = FirebaseStorage.getInstance().getReference("Food Images/$fileName")
+        storageReference.putFile(ImageUri).
+                addOnSuccessListener {
+                    binding.imgFirebase.setImageURI(null)
+                    Toast.makeText(this@StorageActivity,"Upload Successfully",Toast.LENGTH_SHORT).show()
+                    if (progressionDialog.isShowing)progressionDialog.dismiss()
+
+                }.addOnFailureListener{
+            Toast.makeText(this@StorageActivity,"Failed",Toast.LENGTH_SHORT).show()
+            if (progressionDialog.isShowing)progressionDialog.dismiss()
+
+
+        }
+
+
+    }
+
+    private fun selectImage() {
+        val intent = Intent()
+        intent.type = "image/"
+        intent.action = Intent.ACTION_GET_CONTENT
+        startActivityForResult(intent,100)
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 100 && requestCode == RESULT_OK){
+            ImageUri = data?.data!!
+            binding.imgFirebase.setImageURI(ImageUri)
+        }
+    }
+}

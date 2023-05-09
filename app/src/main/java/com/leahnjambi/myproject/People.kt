@@ -3,7 +3,7 @@ package com.leahnjambi.myproject
 import android.os.Parcel
 import android.os.Parcelable
 
-data class People(val image:Int, val name:String):Parcelable{
+data class People(val image:Int, val name:String):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!
@@ -28,5 +28,8 @@ data class People(val image:Int, val name:String):Parcelable{
             return arrayOfNulls(size)
         }
     }
-
 }
+
+
+
+

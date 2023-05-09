@@ -18,6 +18,7 @@ class PeopleActivity : AppCompatActivity() {
             imageView.setImageResource(people.image)
 
 
+
         }
     }
 }
