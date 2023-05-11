@@ -23,6 +23,21 @@ class ShowDetailsActivity : AppCompatActivity() {
         pizza = findViewById(R.id.imgPizza)
         minus = findViewById(R.id.imgMinus)
         plus = findViewById(R.id.imgPlus)
+        val bundle : Bundle? = intent.extras
+        val name = bundle!!.getString("heading")
+        val number = bundle!!.getString("fee")
+        val  image = bundle!!.getInt("imageid")
+        val image2 = bundle!!.getInt("plus")
+        val image3 = bundle!!.getInt("minus")
+
+
+        titleTxt.text = name
+        numberOrder.text = number
+        addToCart.text = number
+        pizza.setImageResource(image)
+        plus.setImageResource(image2)
+        minus.setImageResource(image3)
+
 
 
         plus.setOnClickListener {

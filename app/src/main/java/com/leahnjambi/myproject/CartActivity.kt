@@ -1,6 +1,5 @@
 package com.leahnjambi.myproject
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,13 +24,7 @@ class CartActivity : AppCompatActivity() {
 
         popularAdapter = PopularAdapter(foodList)
         recycler.adapter = popularAdapter
-        popularAdapter.onItemClick = {
-            val intent = Intent(this,HomeActivity::class.java)
-            intent.putExtra("food", it)
-            startActivity(intent)
-
 
         }
 
     }
-}

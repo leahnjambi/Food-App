@@ -17,7 +17,6 @@ class HomeActivity : AppCompatActivity() {
     private var numberOrderVal: Int = 0;
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         val food = intent.getParcelableExtra<Cost>("Cost")
@@ -25,7 +24,6 @@ class HomeActivity : AppCompatActivity() {
             val textView1 : TextView = findViewById(R.id.txtVwHome)
             val textView2 :TextView = findViewById(R.id.txtVwHm3)
             val imageView : ImageView = findViewById(R.id.imageView)
-
             textView1.text = food.name
             imageView.setImageResource(food.image)
             textView2.text = food.number

@@ -47,5 +47,6 @@ class CostAdapter(private val foodList: ArrayList<Cost>)
 
 
     }
+
 }
 

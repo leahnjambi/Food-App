@@ -44,6 +44,11 @@ class MainActivity : AppCompatActivity() {
 
         foodAdapter = CatergoryAdapter(foodList)
         recyclerView1.adapter = foodAdapter
+        foodAdapter.onItemClick = {
+            val intent = Intent(this,ShowDetailsActivity::class.java)
+            intent.putExtra("food", it)
+            startActivity(intent)
+        }
 
 
         recyclerView2 = findViewById(R.id.rVw2)
@@ -70,6 +75,11 @@ class MainActivity : AppCompatActivity() {
 
         popularAdapter = PopularAdapter(foodList)
         recyclerView2.adapter = popularAdapter
+        foodAdapter.onItemClick = {
+            val intent = Intent(this,CatergoryActivity::class.java)
+            intent.putExtra("food",it)
+            startActivity(intent)
+        }
 
 
         peopleButton = findViewById(R.id.PeopleBtn)
