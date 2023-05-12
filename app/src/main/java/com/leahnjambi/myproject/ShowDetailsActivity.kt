@@ -1,8 +1,10 @@
 package com.leahnjambi.myproject
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class ShowDetailsActivity : AppCompatActivity() {
@@ -12,6 +14,8 @@ class ShowDetailsActivity : AppCompatActivity() {
     private lateinit var pizza: ImageView
     private lateinit var minus: ImageView
     private lateinit var plus: ImageView
+    private var numberOrderVal: Int = 0;
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,35 +29,33 @@ class ShowDetailsActivity : AppCompatActivity() {
         plus = findViewById(R.id.imgPlus)
         val bundle : Bundle? = intent.extras
         val name = bundle!!.getString("heading")
-        val number = bundle!!.getString("fee")
         val  image = bundle!!.getInt("imageid")
-        val image2 = bundle!!.getInt("plus")
-        val image3 = bundle!!.getInt("minus")
-
-
         titleTxt.text = name
-        numberOrder.text = number
-        addToCart.text = number
         pizza.setImageResource(image)
-        plus.setImageResource(image2)
-        minus.setImageResource(image3)
 
 
-
-        plus.setOnClickListener {
-            val firstNumber = numberOrder.text.toString().trim()
-            val secondNumber:Int =1
-            var jibu = firstNumber.toDouble() + secondNumber
-            numberOrder.text = jibu.toString()
-
-        }
+        numberOrder = findViewById(R.id.numberOrderText);
+        numberOrderVal = numberOrder.text.toString().toInt();
         minus.setOnClickListener {
-            var firstNumber = numberOrder.text.toString().trim()
-            var secondNumber:Int =1
-            var jibu = firstNumber.toDouble() - secondNumber.toDouble()
-            numberOrder.text = jibu.toString()
-
-        }
-
+            if(numberOrderVal == 0){
+                Toast.makeText( this, "Quantity cannot be less than 0.", Toast.LENGTH_SHORT).show()
+            } else {
+                numberOrderVal--;
+                displayTotals();
+            }
     }
+        plus.setOnClickListener {
+            numberOrderVal++;
+            displayTotals();
+        }
+        addToCart.setOnClickListener {
+            val itisha = Intent(this,SignActivity::class.java)
+            startActivity(itisha)
+        }
+    }
+
+    private fun displayTotals() {
+        numberOrder.setText(numberOrderVal);
+    }
+
 }

@@ -9,6 +9,9 @@ data class Cost(val image:Int, val name:String, val number: String ): Parcelable
         parcel.readString()!!,
         parcel.readString()!!
 
+
+
+
         ) {
     }
 

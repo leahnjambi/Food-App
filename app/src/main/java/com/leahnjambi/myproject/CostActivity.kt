@@ -39,8 +39,7 @@ class CostActivity : AppCompatActivity() {
                 //Toast.makeText(this@CostActivity,"You Click on.$Name",Toast.LENGTH_SHORT).show()
             val intent = Intent(this@CostActivity,ShowDetailsActivity:: class.java)
                 intent.putExtra("heading",foodList[Position].name)
-                intent.putExtra("fee",foodList[Position].number)
-                intent.putExtra("imageId",foodList[Position].image)
+                intent.putExtra("imageid",foodList[Position].image)
                 startActivity(intent)
             }
 

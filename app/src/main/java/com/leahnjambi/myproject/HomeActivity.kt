@@ -24,6 +24,7 @@ class HomeActivity : AppCompatActivity() {
             val textView1 : TextView = findViewById(R.id.txtVwHome)
             val textView2 :TextView = findViewById(R.id.txtVwHm3)
             val imageView : ImageView = findViewById(R.id.imageView)
+
             textView1.text = food.name
             imageView.setImageResource(food.image)
             textView2.text = food.number
