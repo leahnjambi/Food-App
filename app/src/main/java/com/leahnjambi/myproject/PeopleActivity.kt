@@ -17,8 +17,6 @@ class PeopleActivity : AppCompatActivity() {
             textView.text = people.name
             imageView.setImageResource(people.image)
 
-
-
         }
     }
 }

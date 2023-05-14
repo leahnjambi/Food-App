@@ -49,10 +49,8 @@ class StorageActivity : AppCompatActivity() {
             Toast.makeText(this@StorageActivity,"Failed",Toast.LENGTH_SHORT).show()
             if (progressionDialog.isShowing)progressionDialog.dismiss()
 
-
         }
-
-
+        
     }
 
     private fun selectImage() {

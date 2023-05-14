@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -44,11 +45,6 @@ class MainActivity : AppCompatActivity() {
 
         foodAdapter = CatergoryAdapter(foodList)
         recyclerView1.adapter = foodAdapter
-        foodAdapter.onItemClick = {
-            val intent = Intent(this,ShowDetailsActivity::class.java)
-            intent.putExtra("food", it)
-            startActivity(intent)
-        }
 
 
         recyclerView2 = findViewById(R.id.rVw2)
@@ -75,11 +71,6 @@ class MainActivity : AppCompatActivity() {
 
         popularAdapter = PopularAdapter(foodList)
         recyclerView2.adapter = popularAdapter
-        foodAdapter.onItemClick = {
-            val intent = Intent(this,CatergoryActivity::class.java)
-            intent.putExtra("food",it)
-            startActivity(intent)
-        }
 
 
         peopleButton = findViewById(R.id.PeopleBtn)
@@ -89,12 +80,12 @@ class MainActivity : AppCompatActivity() {
         }
         home = findViewById(R.id.homeBtn)
         home.setOnClickListener {
-            val pata = Intent(this,CostActivity::class.java)
+            val pata = Intent(this,StorageActivity::class.java)
             startActivity(pata)
         }
         cart = findViewById(R.id.cart)
         cart.setOnClickListener {
-            val ongeza = Intent(this,StorageActivity::class.java)
+            val ongeza = Intent(this,CostActivity::class.java)
             startActivity(ongeza)
 
         }
@@ -104,6 +95,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(tafuta)
 
         }
-
     }
 }

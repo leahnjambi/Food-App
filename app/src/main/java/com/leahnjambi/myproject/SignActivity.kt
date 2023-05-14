@@ -1,6 +1,5 @@
 package com.leahnjambi.myproject
 
-import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -16,14 +15,14 @@ class SignActivity : AppCompatActivity() {
     lateinit var EnterLocation :EditText
     lateinit var Sign :Button
     lateinit var progressDialog:ProgressDialog
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign)
-        EnterName = findViewById(R.id.editName)
-        EnterNumber = findViewById(R.id.editTextPhone)
-        EnterLocation = findViewById(R.id.editLocation)
-        Sign= findViewById(R.id.btnSubmit)
+        EnterName = findViewById(R.id.edtName)
+        EnterNumber = findViewById(R.id.edtPhone)
+        EnterLocation = findViewById(R.id.edtPost)
+        Sign= findViewById(R.id.btnSign)
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Saving")
         progressDialog.setMessage("Please Wait...")
@@ -67,8 +66,6 @@ class SignActivity : AppCompatActivity() {
                     }
                 }
             }
-            val sahihi = Intent(this,ContactActivity::class.java)
-            startActivity(sahihi)
         }
     }
 }

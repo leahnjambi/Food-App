@@ -27,19 +27,18 @@ class CostActivity : AppCompatActivity() {
         foodList.add(Cost(R.drawable.cat_4, "Drink", "250"))
         foodList.add(Cost(R.drawable.cat_5, "Donut", "540"))
         foodList.add(Cost(R.drawable.pop_1, "Pepperoni Pizza", "1860"))
-        foodList.add(Cost(R.drawable.pop_2, " Cheese Burger", "750"))
+        foodList.add(Cost(R.drawable.pop_2, "Cheese Burger", "750"))
         foodList.add(Cost(R.drawable.pop_3, "Vegetable Pizza", "1900"))
 
 
-        foodAdapter =CostAdapter(foodList)
+        foodAdapter = CostAdapter(foodList)
         recyclerView.adapter = foodAdapter
         foodAdapter.setOnItemClickListener(object : CostAdapter.onItemClickListener{
-            @SuppressLint("SuspiciousIndentation")
             override fun onItemClick(Position: Int) {
-                //Toast.makeText(this@CostActivity,"You Click on.$Name",Toast.LENGTH_SHORT).show()
-            val intent = Intent(this@CostActivity,ShowDetailsActivity:: class.java)
+                val intent = Intent(this@CostActivity,ShowDetailsActivity:: class.java)
                 intent.putExtra("heading",foodList[Position].name)
                 intent.putExtra("imageid",foodList[Position].image)
+                intent.putExtra("cost",foodList[Position].number)
                 startActivity(intent)
             }
 

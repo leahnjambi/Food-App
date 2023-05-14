@@ -17,7 +17,6 @@ class PopularActivity : AppCompatActivity() {
             textView.text = food.name
             imageView.setImageResource(food.image)
 
-
         }
 
     }

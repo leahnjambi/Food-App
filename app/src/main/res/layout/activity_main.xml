@@ -286,7 +286,8 @@
             android:elevation="3dp"
             android:src="@drawable/shopping_cart"
             app:backgroundTint="#F44336"
-            app:layout_anchor="@id/app_bar"
+            app:layout_anchor="@+id/app_bar"
+            app:layout_anchorGravity="center"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
