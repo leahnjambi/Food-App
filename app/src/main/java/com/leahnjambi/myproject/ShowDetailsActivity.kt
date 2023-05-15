@@ -1,13 +1,14 @@
 package com.leahnjambi.myproject
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+
 
 class ShowDetailsActivity : AppCompatActivity() {
     private lateinit var addToCart: TextView
@@ -52,16 +53,22 @@ class ShowDetailsActivity : AppCompatActivity() {
             displayTotals(number);
         }
         addToCart.setOnClickListener {
-            val itisha = Intent(this,SignActivity::class.java)
-            startActivity(itisha)
+//            val itisha = Intent(this,SignActivity::class.java)
+//            startActivity(itisha)
+
+            val uri = Uri.parse("smsto:0795549871")
+            val intent = Intent(Intent.ACTION_SENDTO, uri)
+            intent.putExtra("sms_body", "NEW ORDER\n" +
+                    "Item name: $name\n" +
+                    "Price: "+(number * numberOrderVal))
+            startActivity(intent)
         }
     }
 
     private fun displayTotals(unit: Double) {
         val numberOrder = findViewById<View>(R.id.numberOrderText) as TextView
         cost.text = (unit * numberOrderVal).toString()
-        numberOrder.text = numberOrderVal.toString();
-
+        numberOrder.text = numberOrderVal.toString()
     }
 
 }

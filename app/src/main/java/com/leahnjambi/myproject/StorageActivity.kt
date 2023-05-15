@@ -40,16 +40,20 @@ class StorageActivity : AppCompatActivity() {
         val fileName = formatter.format(now)
         val storageReference = FirebaseStorage.getInstance().getReference("Food Images/$fileName")
         storageReference.putFile(ImageUri).
-                addOnSuccessListener {
-                    binding.imgFirebase.setImageURI(null)
-                    Toast.makeText(this@StorageActivity,"Upload Successfully",Toast.LENGTH_SHORT).show()
-                    if (progressionDialog.isShowing)progressionDialog.dismiss()
+                addOnCompleteListener {
+                    it.addOnSuccessListener {
+                        binding.imgFirebase.setImageURI(null)
+                        Toast.makeText(this@StorageActivity,"Upload Successfully",Toast.LENGTH_SHORT).show()
+                        if (progressionDialog.isShowing)progressionDialog.dismiss()
+                    }
+
 
                 }.addOnFailureListener{
             Toast.makeText(this@StorageActivity,"Failed",Toast.LENGTH_SHORT).show()
             if (progressionDialog.isShowing)progressionDialog.dismiss()
 
         }
+
         
     }
 
@@ -64,9 +68,12 @@ class StorageActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == 100 && requestCode == RESULT_OK){
+        if (requestCode == 100 && resultCode == RESULT_OK){
             ImageUri = data?.data!!
+            Toast.makeText(this, "selected", Toast.LENGTH_SHORT).show()
             binding.imgFirebase.setImageURI(ImageUri)
+        }else{
+            Toast.makeText(this, "failed with code: $requestCode", Toast.LENGTH_SHORT).show()
         }
     }
 }

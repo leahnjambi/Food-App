@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/edtName"
-        android:layout_width="221dp"
-        android:layout_height="51dp"
+        android:layout_width="268dp"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
@@ -20,11 +20,11 @@
 
     <EditText
         android:id="@+id/edtPhone"
-        android:layout_width="235dp"
-        android:layout_height="46dp"
+        android:layout_width="268dp"
+        android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="EnterPhone Number"
+        android:hint="Enter Phone Number"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="@+id/edtName"
         app:layout_constraintHorizontal_bias="0.511"
@@ -32,28 +32,41 @@
         app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
     <EditText
-        android:id="@+id/edtPost"
-        android:layout_width="241dp"
-        android:layout_height="44dp"
+        android:id="@+id/edtEmail"
+        android:layout_width="268dp"
+        android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Enter Post Address"
-        android:inputType="textPostalAddress"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/edtPhone"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="@+id/edtPhone"
         app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="268dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
 
     <Button
         android:id="@+id/btnSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="357dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
         android:text="Sign"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edtPost"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/edtPost"
-        app:layout_constraintTop_toBottomOf="@+id/edtPost" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
