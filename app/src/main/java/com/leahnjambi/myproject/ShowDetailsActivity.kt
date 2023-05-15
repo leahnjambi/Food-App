@@ -55,12 +55,12 @@ class ShowDetailsActivity : AppCompatActivity() {
         addToCart.setOnClickListener {
 //            val itisha = Intent(this,SignActivity::class.java)
 //            startActivity(itisha)
-
-            val uri = Uri.parse("smsto:0795549871")
+            val uri = Uri.parse("smsto:+254795549871")
             val intent = Intent(Intent.ACTION_SENDTO, uri)
             intent.putExtra("sms_body", "NEW ORDER\n" +
                     "Item name: $name\n" +
-                    "Price: "+(number * numberOrderVal))
+                    "$name quantity: $numberOrderVal\n"+
+                    "Total price: "+(number * numberOrderVal))
             startActivity(intent)
         }
     }
