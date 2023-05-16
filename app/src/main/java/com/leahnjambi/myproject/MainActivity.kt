@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var popularAdapter: PopularAdapter
     lateinit var peopleButton: LinearLayout
     lateinit var home :LinearLayout
-    lateinit var cart: FloatingActionButton
+    lateinit var cart: LinearLayout
     lateinit var search :LinearLayout
 
 
@@ -80,10 +80,10 @@ class MainActivity : AppCompatActivity() {
         }
         home = findViewById(R.id.homeBtn)
         home.setOnClickListener {
-            val pata = Intent(this,StorageActivity::class.java)
+            val pata = Intent(this,SignActivity::class.java)
             startActivity(pata)
         }
-        cart = findViewById(R.id.cart)
+        cart = findViewById(R.id.uploadBtn)
         cart.setOnClickListener {
             val ongeza = Intent(this,CostActivity::class.java)
             startActivity(ongeza)

@@ -209,9 +209,32 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/uploadBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="70dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/baseline_shopping_cart_24" />
+
+                    <TextView
+                        android:id="@+id/txtUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cart"
+                        android:textAlignment="center"
+                        android:textColor="#010910" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/homeBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginRight="50dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -234,13 +257,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="50dp"
+                    android:layout_marginRight="30dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imgsearch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/search" />
+                        app:srcCompat="@drawable/baseline_image_search_24" />
 
                     <TextView
                         android:id="@+id/txtview2"
@@ -256,7 +280,6 @@
                     android:id="@+id/PeopleBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="150dp"
                     android:orientation="vertical">
 
                     <ImageView
@@ -277,18 +300,6 @@
             </LinearLayout>
 
         </com.google.android.material.bottomappbar.BottomAppBar>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/cart"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="#F44336"
-            android:elevation="3dp"
-            android:src="@drawable/shopping_cart"
-            app:backgroundTint="#F44336"
-            app:layout_anchor="@+id/app_bar"
-            app:layout_anchorGravity="center"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

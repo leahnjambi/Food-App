@@ -14,7 +14,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 class SignActivity : AppCompatActivity() {
     lateinit var EnterName : EditText
-    lateinit var EnterNumber :EditText
     lateinit var EnterEmail :EditText
     lateinit var  EnterPassword :EditText
     lateinit var Sign :Button
@@ -26,7 +25,6 @@ class SignActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign)
         EnterName = findViewById(R.id.edtName)
-        EnterNumber = findViewById(R.id.edtPhone)
         EnterEmail = findViewById(R.id.edtEmail)
         EnterPassword = findViewById(R.id.edtPassword)
         Sign= findViewById(R.id.btnSign)
@@ -38,10 +36,9 @@ class SignActivity : AppCompatActivity() {
         // Set on ClickListener to all the Edit Text and the Button
         Sign.setOnClickListener {
             var name = EnterName.text.toString().trim()
-            var phoneNumber = EnterNumber.text.toString().trim()
             var email = EnterEmail.text.toString().trim()
             var password = EnterPassword.text.toString().trim()
-            if (name.isEmpty()|| email.isEmpty() || password.isEmpty() || phoneNumber.isEmpty()){
+            if (name.isEmpty()|| email.isEmpty() || password.isEmpty()){
                 message("Empty Fields!!!!","Please fill the input")
 
             }else{
@@ -53,11 +50,14 @@ class SignActivity : AppCompatActivity() {
                             Toast.LENGTH_LONG).show()
                         mAuth.signOut()
                         finish()
+                        val anza = Intent(this,StorageActivity::class.java)
+                        startActivity(anza)
                     }else{
                         message("Sign in failed,Try Again",it.exception!!.message.toString())
                     }
                 }
             }
+
         }
     }
     fun message(title:String, message: String){

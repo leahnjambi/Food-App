@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.leahnjambi.myproject.databinding.ActivityCostBinding
 
 //import com.google.firebase.ktx.Firebase
 //import com.google.firebase.storage.StorageReference
@@ -80,6 +81,7 @@ class CostActivity : AppCompatActivity() {
     private lateinit var foodList: ArrayList<Cost>
     private lateinit var foodAdapter: CostAdapter
     private lateinit var databaseReference:DatabaseReference
+    private lateinit var binding:ActivityCostBinding
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -125,9 +127,6 @@ class CostActivity : AppCompatActivity() {
                 intent.putExtra("cost",foodList[Position].number)
                 startActivity(intent)
             }
-
         })
-
     }
-
 }
