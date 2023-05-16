@@ -3,7 +3,7 @@ package com.leahnjambi.myproject
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Cost(val image:Int, val name:String, val number: String ): Parcelable {
+data class Cost(val image:Int, val name:String, val number: String, val url :String? = null ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,

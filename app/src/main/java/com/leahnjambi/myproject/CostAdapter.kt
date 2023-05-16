@@ -1,13 +1,18 @@
 package com.leahnjambi.myproject
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
-class CostAdapter(private val foodList: ArrayList<Cost>)
+class CostAdapter(
+    private val foodList: ArrayList<Cost>,
+    private val  context : Context
+         )
     : RecyclerView.Adapter<CostAdapter.FoodViewHolder>(){
     private lateinit var mListener:onItemClickListener
     interface onItemClickListener{
@@ -31,7 +36,9 @@ class CostAdapter(private val foodList: ArrayList<Cost>)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
+
         return FoodViewHolder (LayoutInflater.from(parent.context).inflate(R.layout.activity_home, parent, false),mListener)
+
 
     }
 
@@ -40,13 +47,17 @@ class CostAdapter(private val foodList: ArrayList<Cost>)
     }
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
+        Glide.with(context).load(foodList[position].image).into(holder.imageView)
         val food = foodList[position]
         holder.imageView.setImageResource(food.image)
         holder.textView1.text = food.name
         holder.textView2.text = food.number
 
 
+
+
     }
+
 
 }
 

@@ -218,13 +218,13 @@
                         android:id="@+id/imgHome"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/baseline_home_24" />
+                        app:srcCompat="@drawable/baseline_photo_library_24" />
 
                     <TextView
                         android:id="@+id/txtview1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Home"
+                        android:layout_height="wrap_content"
+                        android:text="Upload"
                         android:textAlignment="center"
                         android:textColor="#010910" />
                 </LinearLayout>

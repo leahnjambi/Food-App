@@ -13,36 +13,61 @@
         android:layout_marginTop="16dp"
         android:textAlignment="center"
         android:id="@+id/tvFirebase"
-        android:text="Firebase Storage"
+        android:text="New Meal Upload"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
-    <ImageView
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/imgFirebase"
-        android:layout_marginVertical="30dp"
-        android:scaleType="centerCrop"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:id="@+id/tvName"
+        android:hint="Enter Meal Name"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:textColorHint="@color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:id="@+id/tvPrice"
+        android:hint="Enter Meal Price"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:textColorHint="@color/black"/>
+
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_marginBottom="32dp"
-        android:text="Select Food"
+        android:text="Select Meal"
         android:id="@+id/selectImageBtn"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:backgroundTint="#032901"/>
+
+    <ImageView
+        android:id="@+id/imgFirebase"
+        android:layout_width="376dp"
+        android:layout_height="142dp"
+        android:layout_marginVertical="30dp"
+        android:scaleType="centerCrop" />
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginBottom="32dp"
         android:id="@+id/uploadImageBtn"
-        android:text="Upload Food"
+        android:layout_width="215dp"
+        android:layout_height="67dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#009688"
+        android:text="Upload Meal"
         android:textColor="@color/white"
-        android:textStyle="bold"
         android:textSize="24sp"
-        android:backgroundTint="#032901"/>
+        android:textStyle="bold" />
 
 
 </LinearLayout>
