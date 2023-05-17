@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Project</string>
+    <string name="app_name">Food App</string>
     <string name="find_your_favourite_food">Find Your Favourite Food</string>
     <string name="pay"/>
 </resources>

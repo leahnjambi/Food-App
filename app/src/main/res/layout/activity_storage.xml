@@ -4,51 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:paddingHorizontal="16dp"
     tools:context=".StorageActivity">
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textAlignment="center"
         android:id="@+id/tvFirebase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="New Meal Upload"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:textAlignment="center"
-        android:id="@+id/tvName"
-        android:hint="Enter Meal Name"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"
-        android:textColorHint="@color/black"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textAlignment="center"
-        android:id="@+id/tvPrice"
-        android:hint="Enter Meal Price"
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"
-        android:textColorHint="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
 
     <Button
+        android:id="@+id/selectImageBtn"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="32dp"
+        android:backgroundTint="#032901"
         android:text="Select Meal"
-        android:id="@+id/selectImageBtn"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:textColor="@color/white"
-        android:backgroundTint="#032901"/>
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imgFirebase"
