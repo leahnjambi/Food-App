@@ -137,6 +137,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="305dp"
                     android:text="Catergory"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -163,6 +164,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="305dp"
                     android:text="Popular"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -205,46 +207,45 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/uploadBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="70dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imgUpload"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/baseline_shopping_cart_24" />
-
-                    <TextView
-                        android:id="@+id/txtUpload"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Cart"
-                        android:textAlignment="center"
-                        android:textColor="#010910" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/homeBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="50dp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/imgHome"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/baseline_home_24" />
+
+                    <TextView
+                        android:id="@+id/txtVwHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        android:textAlignment="center"
+                        android:textColor="#010910" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/uploadBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgUpload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         app:srcCompat="@drawable/baseline_photo_library_24" />
 
                     <TextView
-                        android:id="@+id/txtview1"
+                        android:id="@+id/txtUpload"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Upload"
@@ -256,8 +257,7 @@
                     android:id="@+id/searchBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -279,6 +279,7 @@
                 <LinearLayout
                     android:id="@+id/PeopleBtn"
                     android:layout_width="wrap_content"
+                    android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 

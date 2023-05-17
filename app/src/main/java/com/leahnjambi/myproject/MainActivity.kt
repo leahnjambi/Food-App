@@ -5,11 +5,9 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView1: RecyclerView
@@ -19,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var popularAdapter: PopularAdapter
     lateinit var peopleButton: LinearLayout
     lateinit var home :LinearLayout
-    lateinit var cart: LinearLayout
+    lateinit var upload: LinearLayout
     lateinit var search :LinearLayout
 
 
@@ -80,12 +78,12 @@ class MainActivity : AppCompatActivity() {
         }
         home = findViewById(R.id.homeBtn)
         home.setOnClickListener {
-            val pata = Intent(this,SignActivity::class.java)
+            val pata = Intent(this,CostActivity::class.java)
             startActivity(pata)
         }
-        cart = findViewById(R.id.uploadBtn)
-        cart.setOnClickListener {
-            val ongeza = Intent(this,CostActivity::class.java)
+        upload = findViewById(R.id.uploadBtn)
+        upload.setOnClickListener {
+            val ongeza = Intent(this,SignActivity::class.java)
             startActivity(ongeza)
 
         }
